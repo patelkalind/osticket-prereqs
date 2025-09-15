@@ -27,51 +27,98 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 <br>Create a Resource Group and Virtual Machine</br>
 To get started with this exercise of osTicket, we must first create a Resource Group and a Virtual Machine within Azure. The very first step is to create a Resource Group by clicking Create New in the directory
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/28101e43-a4d9-4b14-ad28-37f87ee82094" />
  
 After that, provide a unique name for the Resource Group
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/f86c31f7-2cc3-4bd9-bd2e-5f861e4ca083" />
  
 Once that is completed, you may view the Resource Group within the Azure Directory at any time
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/a2545967-4aa2-4dad-b49f-aadcb03c90af" />
  
 After creating the Resource Group, return to the Azure Directory to create a Virtual Machine
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/72cf5215-293a-44b4-b16a-4e35e4ce41eb" />
  
-Click Create and from there, provide a name of the virtual machine and assign it to a resource group that was previously created
+Click Create, and from there, provide a name for the virtual machine and assign it to a resource group that was previously created
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/4e29acc9-8c23-42be-bbd7-c6f23d753a88" />
  
-Customize the virtual machine to fit the settings that you prefer. In this case, the VM will be imaged under Windows 10
+You can customize the virtual machine to fit the settings that you prefer. In this case, the VM will be imaged under Windows 10
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/bf27cfc8-f989-46aa-afe5-1797677bc5b0" />
  
 After completing that activity, provide a unique username and password for the virtual machine and configure the inbound port
- 
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/b8fac93b-8e5d-468a-b588-cb79850b991d" />
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/543ab280-7f4f-4312-a978-c5e250d7b756" />
  
 After configuring the settings, go to Review+Create and click Create
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/4563da6e-b94b-4fde-b53b-581c1a721f54" />
  
 After clicking Review+Create, observe the deployment of the virtual machine
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/2a3fd04b-653a-4ccc-afc7-618a773aea50" />
  
-Verify to see if the deployment is successful
+Verify to see if the deployment was successful
+
+<img width="975" height="468" alt="image" src="https://github.com/user-attachments/assets/56b783fc-ce11-4f3d-932c-e9f8786b8522" />
  
-After the deployment succeeded, please proceed to log in to the Windows VM using the Remote Desktop Connection app (or equivalent) on your PC.
-Download osTicket Installation Files
-After logging in to your VM, download the osTicket installation file as shown below
+After the deployment succeeds, please go ahead and log in to the Windows VM using the Remote Desktop Connection app (or equivalent) on your PC.
+
+<b>Download osTicket Installation Files.</b>
+
+After logging in to your VM, download the osTicket installation file as shown below:
+
+<img width="975" height="523" alt="image" src="https://github.com/user-attachments/assets/16386eb5-42a3-4c78-b02b-50abc89c310e" />
  
-From there, extract the zip file onto the desktop
+From there, you can extract the zip file to your desktop.
+
+<img width="975" height="816" alt="image" src="https://github.com/user-attachments/assets/9d4d23d4-c17e-436f-9651-e3033a24e112" />
  
-After that, go to the Start Menu and go to Control Panel. From there, go to Programs and “Turn Windows Features On or Off”. After that, click Internet Information Services  World Wide Web Services  Application Development Features  CGI. From there, you can install CGI
+Next, navigate to the Start Menu and select Control Panel. From there, go to Programs and “Turn Windows Features On or Off”. Next, navigate to Internet Information Services --> World Wide Web Services --> Application Development Features --> CGI. From there, you can install CGI.
+
+<img width="975" height="281" alt="image" src="https://github.com/user-attachments/assets/92a607c2-9023-459c-9420-372c159cd0d0" />
+
+After installing CGI, you can view the IIS by typing the virtual machine's IP address into your web browser.
+
+<img width="975" height="523" alt="image" src="https://github.com/user-attachments/assets/ac026c3d-b3e0-465b-ba73-f95f77e1895e" />
  
-After installing CGI, you can see what the IIS looks like once you type in the IP address of the virtual machine on the web browser
+The next step is installing the PHP Manager from the osTicket Installation Files.
+
+<img width="974" height="799" alt="image" src="https://github.com/user-attachments/assets/71916f26-5f0e-42ed-a9bc-b3c5528e48b9" />
  
-The next step is installing the PHP Manager from the osTicket Installation Files
+After installing the PHP Manager, install the Rewrite Module from the installation files folder.
+
+<img width="966" height="755" alt="image" src="https://github.com/user-attachments/assets/4a71ba53-d70c-45ff-b721-2e965273ca8d" />
  
-After installing the PHP Manager, install the Rewrite Module from the installation files folder
+After installing the previous two items, go to Windows Explorer and head to the C: folder. From there, create a PHP folder within the C: drive of the VM, as shown here:
+
+<img width="975" height="514" alt="image" src="https://github.com/user-attachments/assets/ab21e3f8-560b-412e-b965-dda1d90884d5" />
  
-After installing the previous two items, go to Windows Explorer and head to the C: folder. From there, create a PHP folder within the C: drive of the VM as shown here
+After creating the PHP folder on the C: drive, return to the osTicket Installation folder and unzip the PHP zip file into the folder that was just created
+
+<img width="975" height="816" alt="image" src="https://github.com/user-attachments/assets/b17e7877-112d-4f28-a5d5-5b4d96eca885" />
  
-After creating the PHP folder on the C: drive, return to the osTicket Installation folder and unzip the PHP zip file onto the folder that was just created
+After unzipping the PHP zip file into the folder in the C: drive, the next step is installing Microsoft Visual C++ from the installation files folder
+
+<img width="938" height="581" alt="image" src="https://github.com/user-attachments/assets/15c9d571-17eb-4896-9a7d-bf018f13f2ac" />
  
-After unzipping the PHP zip file onto the folder in the C: drive, the next step is installing Microsoft Visual C++ from the installation files folder
+After installing this, the next step is installing the MySQL Server application from the installation files folder.
+
+<img width="966" height="755" alt="image" src="https://github.com/user-attachments/assets/2c552022-1818-431b-bc8d-552b67cb25a1" />
  
-After installing this, the next step is installing the MySQL Server application from the installation files folder
+After installing the MySQL Server, please go ahead and launch the configuration wizard of MySQL.
+
+<img width="975" height="744" alt="image" src="https://github.com/user-attachments/assets/e09cee87-bbf9-41a9-a4b6-e938643d105b" />
  
-After installing the MySQL Server, please proceed to launch the configuration wizard of MySQL
- 
-After clicking “Next”, go with the Standard configuration to keep things simple
+After clicking “Next”, go with the Standard configuration to keep things simple.
+
+<img width="975" height="744" alt="image" src="https://github.com/user-attachments/assets/4eb95c69-9fa8-49ae-bbd8-be621dfff70f" />
  
 After clicking the Standard Configuration Wizard, the next step is creating a username and password. Just to inform you all, the password and username shouldn’t be the same as you must have a strong password and unique username in the real world when signing into your ticketing system. The example below was strictly for the lab assignment created for an online course.
  
